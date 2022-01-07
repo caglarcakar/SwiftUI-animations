@@ -11,7 +11,7 @@ import SwiftUI
 struct animationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WaveButtonView()
         }
     }
 }
