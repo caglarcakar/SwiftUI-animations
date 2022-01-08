@@ -58,24 +58,16 @@ struct WaveButtonView: View {
                 .animation(wave ? .easeOut(duration: 0.3) : .none, value: wave)
                 
         }
-        .buttonStyle(.plain)
+        .buttonStyle(CustomButtonStyle())
 
-    }
-    private func pressAnimation(){
-        if !released {
-            
-        }
     }
     
     private func pulseAnimation(){
         if released { return }
-        print("pulse animation")
-        scale = 0.7
+        scale = 0.70
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            scale = 0.8
-            print("pulse animation D1")
+            scale = 0.75
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                print("pulse animation D2")
                 pulseAnimation()
             }
         }
@@ -85,7 +77,6 @@ struct WaveButtonView: View {
         scale = 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
 //            scale = 1
-            print("release animation D1")
             wave = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 wave = false
@@ -98,4 +89,10 @@ struct WaveButtonView_Previews: PreviewProvider {
     static var previews: some View {
         WaveButtonView()
     }
+}
+
+struct CustomButtonStyle: ButtonStyle {
+  func makeBody(configuration: Self.Configuration) -> some View {
+    configuration.label
+  }
 }

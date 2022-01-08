@@ -21,23 +21,20 @@ import SwiftUI
 //    }
 //}
 
-struct ContentView: View {
+struct TapMeButtonView: View {
     @State private var hidden = false
     @State private var wave = false
     
-    
         var body: some View {
-//            Button("Tap Me") {
-//                self.hidden = true
-//            }
             Button(action: {
-                hidden.toggle()
+               
             }, label: {
                 Circle()
                     .frame(width: 50, height: 50)
             })
             .scaleEffect(hidden ? 2.0 : 1.0)
             //.opacity(hidden ? 0.5 : 1)
+            .foregroundColor(Color.blue)
             .animation(.easeOut(duration: 0.3), value: hidden)
             .onAppear(perform: continuousAnimation)
             .background {
@@ -48,6 +45,7 @@ struct ContentView: View {
                     .scaleEffect(wave ? 4 : 0.8)
                     .animation(wave ? .easeOut(duration: 1.8) : .none, value: wave)
             }
+            .buttonStyle(CustomButtonStyle())
        }
     
     private func continuousAnimation(){
@@ -61,7 +59,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TapMeButtonView()
             .previewLayout(.sizeThatFits)
     }
 }
