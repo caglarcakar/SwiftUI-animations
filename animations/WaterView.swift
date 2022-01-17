@@ -19,7 +19,7 @@ struct WaterView: View {
             ZStack{
                 WaterShape(controlPointY: animate ? 0.35 : 0.65).fill(Color("Ocean").opacity(0.9))
                     .frame(width: UIScreen.screenWidth + 100, height: 200)
-                    .offset(x: animate ? -30 : 30, y: -10)
+                    .offset(x: animate ? -10 : 30, y: -10)
                     .onAppear {
                         withAnimation(Animation.easeInOut(duration: 4).repeatForever()) {
                                         animate.toggle()
@@ -35,17 +35,14 @@ struct WaterView: View {
                     }
                 WaterShape(controlPointY: animate3 ? 0.35 : 0.65).fill(Color("Aqua").opacity(0.9))
                     .frame(width: UIScreen.screenWidth + 100, height: 200)
-                    .offset(x: animate3 ? -30 : 30, y: 0)
+                    .offset(x: animate3 ? -20 : 30, y: 0)
                     .onAppear {
                         withAnimation(Animation.easeInOut(duration: 3).repeatForever()) {
                                         animate3.toggle()
                         }
                     }
-                    
             }
         }
-        
-        
     }
 }
 
