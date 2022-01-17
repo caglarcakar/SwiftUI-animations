@@ -49,7 +49,7 @@ struct WaveButtonView: View {
         .animation(.easeInOut(duration: 0.2), value: scale)
         .background {
             Circle()
-                .stroke(lineWidth: wave ? 0.5 : 0.8)
+                .stroke(lineWidth: wave ? 0.5 : 1)
                 .opacity(wave ? 0 : 0.8)
                 .foregroundColor(Color.blue)
                 

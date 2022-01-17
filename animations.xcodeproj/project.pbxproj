@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		732988E927949F3800C2404A /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732988E827949F3800C2404A /* WaterView.swift */; };
+		732988EB27956B2300C2404A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732988EA27956B2300C2404A /* ViewExtension.swift */; };
 		7345F09627877397004616CF /* animationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345F09527877397004616CF /* animationsApp.swift */; };
 		7345F09827877397004616CF /* TapMeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345F09727877397004616CF /* TapMeButtonView.swift */; };
 		7345F09A2787739A004616CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7345F0992787739A004616CF /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		732988E827949F3800C2404A /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		732988EA27956B2300C2404A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		7345F09227877397004616CF /* animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345F09527877397004616CF /* animationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationsApp.swift; sourceTree = "<group>"; };
 		7345F09727877397004616CF /* TapMeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMeButtonView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				7345F0A327886C02004616CF /* WaveButtonView.swift */,
 				7345F0992787739A004616CF /* Assets.xcassets */,
 				7345F09B2787739A004616CF /* Preview Content */,
+				732988E827949F3800C2404A /* WaterView.swift */,
+				732988EA27956B2300C2404A /* ViewExtension.swift */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732988E927949F3800C2404A /* WaterView.swift in Sources */,
 				7345F09827877397004616CF /* TapMeButtonView.swift in Sources */,
 				7345F09627877397004616CF /* animationsApp.swift in Sources */,
 				7345F0A427886C02004616CF /* WaveButtonView.swift in Sources */,
+				732988EB27956B2300C2404A /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
