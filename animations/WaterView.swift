@@ -7,42 +7,60 @@
 
 import SwiftUI
 
+
 struct WaterView: View {
     
     @State private var animate:Bool = false
     @State private var animate2:Bool = false
     @State private var animate3:Bool = false
+    @State private var sunRotationAnimation:Bool = false
     
     var body: some View {
-        VStack{
-            Spacer()
-            ZStack{
-                WaterShape(controlPointY: animate ? 0.35 : 0.65).fill(Color("Ocean").opacity(0.9))
-                    .frame(width: UIScreen.screenWidth + 100, height: 200)
-                    .offset(x: animate ? -10 : 30, y: -10)
-                    .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 4).repeatForever()) {
-                                        animate.toggle()
+        ZStack {
+            VStack{
+                HStack{
+                    Spacer()
+                    SunView()
+                        .onAppear(perform: {
+                            withAnimation(Animation.linear(duration: 8).repeatForever(autoreverses: false)) {
+                                            sunRotationAnimation.toggle()
+                            }
+                        })
+                        .rotationEffect(Angle(degrees: sunRotationAnimation ? 0 : 360), anchor: .center)
+                }
+                Spacer()
+                ZStack{
+                    WaterShape(controlPointY: animate ? 0.35 : 0.65).fill(Color(("Ocean")).opacity(0.9))
+                        .frame(width: UIScreen.screenWidth + 100, height: 200)
+                        .offset(x: animate ? -10 : 30, y: -10)
+                        .onAppear {
+                            withAnimation(Animation.easeInOut(duration: 4).repeatForever()) {
+                                            animate.toggle()
+                            }
                         }
-                    }
-                WaterShape(controlPointY: animate2 ? 0.65 : 0.35).fill(Color("Sky").opacity(0.9))
-                    .frame(width: UIScreen.screenWidth + 100, height: 200)
-                    .offset(x: animate2 ? -30 : 30, y: 0)
-                    .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 2).repeatForever()) {
-                                        animate2.toggle()
+                    WaterShape(controlPointY: animate2 ? 0.65 : 0.35).fill(Color("Sky").opacity(0.9))
+                        .frame(width: UIScreen.screenWidth + 100, height: 200)
+                        .offset(x: animate2 ? -30 : 30, y: 0)
+                        .onAppear {
+                            withAnimation(Animation.easeInOut(duration: 2).repeatForever()) {
+                                            animate2.toggle()
+                            }
                         }
-                    }
-                WaterShape(controlPointY: animate3 ? 0.35 : 0.65).fill(Color("Aqua").opacity(0.9))
-                    .frame(width: UIScreen.screenWidth + 100, height: 200)
-                    .offset(x: animate3 ? -20 : 30, y: 0)
-                    .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 3).repeatForever()) {
-                                        animate3.toggle()
+                    WaterShape(controlPointY: animate3 ? 0.35 : 0.65).fill(Color("Aqua").opacity(0.9))
+                        .frame(width: UIScreen.screenWidth + 100, height: 200)
+                        .offset(x: animate3 ? -20 : 30, y: 0)
+                        .onAppear {
+                            withAnimation(Animation.easeInOut(duration: 3).repeatForever()) {
+                                            animate3.toggle()
+                            }
                         }
-                    }
+                }
             }
         }
+        .ignoresSafeArea()
+        .background(
+            RadialGradient(colors: [Color("Lemon"),Color("Cantaloupe")], center: .topTrailing, startRadius: 0, endRadius: 500)
+            )
     }
 }
 

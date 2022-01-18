@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		732988E927949F3800C2404A /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732988E827949F3800C2404A /* WaterView.swift */; };
 		732988EB27956B2300C2404A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732988EA27956B2300C2404A /* ViewExtension.swift */; };
+		732988ED2795B8FC00C2404A /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 732988EC2795B8FC00C2404A /* account.png */; };
+		732988F12796D93B00C2404A /* RotatedSunLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732988F02796D93B00C2404A /* RotatedSunLightView.swift */; };
+		732988F32796E22600C2404A /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732988F22796E22600C2404A /* SunView.swift */; };
 		7345F09627877397004616CF /* animationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345F09527877397004616CF /* animationsApp.swift */; };
 		7345F09827877397004616CF /* TapMeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345F09727877397004616CF /* TapMeButtonView.swift */; };
 		7345F09A2787739A004616CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7345F0992787739A004616CF /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		732988E827949F3800C2404A /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		732988EA27956B2300C2404A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		732988EC2795B8FC00C2404A /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		732988F02796D93B00C2404A /* RotatedSunLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedSunLightView.swift; sourceTree = "<group>"; };
+		732988F22796E22600C2404A /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
 		7345F09227877397004616CF /* animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345F09527877397004616CF /* animationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationsApp.swift; sourceTree = "<group>"; };
 		7345F09727877397004616CF /* TapMeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMeButtonView.swift; sourceTree = "<group>"; };
@@ -61,9 +67,12 @@
 				7345F09727877397004616CF /* TapMeButtonView.swift */,
 				7345F0A327886C02004616CF /* WaveButtonView.swift */,
 				7345F0992787739A004616CF /* Assets.xcassets */,
+				732988EC2795B8FC00C2404A /* account.png */,
 				7345F09B2787739A004616CF /* Preview Content */,
 				732988E827949F3800C2404A /* WaterView.swift */,
 				732988EA27956B2300C2404A /* ViewExtension.swift */,
+				732988F02796D93B00C2404A /* RotatedSunLightView.swift */,
+				732988F22796E22600C2404A /* SunView.swift */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732988ED2795B8FC00C2404A /* account.png in Resources */,
 				7345F09D2787739A004616CF /* Preview Assets.xcassets in Resources */,
 				7345F09A2787739A004616CF /* Assets.xcassets in Resources */,
 			);
@@ -149,7 +159,9 @@
 				732988E927949F3800C2404A /* WaterView.swift in Sources */,
 				7345F09827877397004616CF /* TapMeButtonView.swift in Sources */,
 				7345F09627877397004616CF /* animationsApp.swift in Sources */,
+				732988F12796D93B00C2404A /* RotatedSunLightView.swift in Sources */,
 				7345F0A427886C02004616CF /* WaveButtonView.swift in Sources */,
+				732988F32796E22600C2404A /* SunView.swift in Sources */,
 				732988EB27956B2300C2404A /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
